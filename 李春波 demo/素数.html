@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>判断一个数是否是素数</title>
+<script type="text/javascript">
+function confirm(){
+	var txt=document.getElementById(txt);
+	var num=txt.value();
+	console.log(num);
+}
+//判断是不是素数
+function getsushu(n){
+	var isshu=true;
+	for(var i=2;i<Math.sqrt(n);i++){
+		if(n%i===0){
+			isshu=false;
+			}
+		}
+		return isshu;
+	}
+	console.log(getsushu(3));
+//阶乘
+function getJS(n){
+	var num=1;
+	for(var i=1;i<=n;i++){
+		num*=i;
+		}
+	return num;
+	}
+console.log(getJS(6));
+//阶乘累加
+function getSum(n){
+	var num=0;
+	for(var i=1;i<=n;i++){
+		num+=getJS(i);
+		}
+		return num;
+	}
+console.log(getSum(3));
+
+console.log(fun);
+
+var fun=function(){
+	}
+	console.log(fun());
+{ var a=20;}
+console.log(a);
+//预解析
+//var a;
+//function fi(){}
+//a=8;
+//fi();
+var a=8;
+function fi(){
+	console.log(a);
+	var a="123";
+	}
+fi();
+//菲薄纳切数列第n个数是什么
+function getNum(n){
+	var n1=1;
+	var n2=1;
+	var num=0;
+	if(n<=1){
+		return 1;
+		}
+	else{
+		for(var i=3;i<=n;i++){
+			num=n1+n2;
+			n1=n2;
+			n2=num;
+			}
+		return num;
+		}
+	}
+console.log(getNum(5));
+
+</script>
+</head>
+
+<body>
+	<input type="text" id="txt" />
+    <input type="button" id="confirmBtn" onclick="confirm()" value="判断"/>
+</body>
+</html>

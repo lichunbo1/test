@@ -1,0 +1,65 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户注册信息</title>
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+</head>
+
+<body onLoad="resultDay()">
+<div class="artic">
+  <div class="header">
+    <h2>用户注册信息</h2>
+  </div>
+  <form class="content" id="" method="post" >
+    <div class="user"> <span>用户名：</span>
+      <input type="text" class="user-input" id="userName" onfocus="nameFocus()" onblur="nameBlur()" placeholder="请输入用户名" />
+    </div>
+    <div class="reminder" id="reminderName"></div>
+    
+    <div class="user"> <span>密码：</span>
+      <input type="password" class="user-input" id="userPwd" onFocus="pwdFocus()" onBlur="pwdBlur()" placeholder="密码长度不能小于6"/>
+    </div>
+    <div class="reminder" id="reminderPwd"></div>
+    
+    <div class="user"> <span>再次输入密码：</span>
+      <input type="password" class="user-input" id="userConPwd" onFocus="conPwdFocus()" onBlur="conPwdBlur()"  placeholder="再次输入密码"/>
+    </div>
+    <div class="reminder" id="reminderConPwd"></div>
+    
+    <div class="user"> <span>性别:</span>
+      <input type="radio" id="nan" name="sex" value="男" checked="checked"  />
+      男
+      <input type="radio" id="nv" name="sex" value="女"  />
+      女 </div>
+    <div class="reminder" id="reminderSex"></div>
+    
+    <div class="user"> <span>出生日期：</span>
+    	<div class="selectDay">
+        	<select id="year" onChange="resultDay()"></select>年
+   			<select id="month" onChange="resultDay()"></select>月
+    		<select id="day"></select>日
+        </div>
+    </div>
+    <div class="reminder" id="reminderName"></div>
+    
+    <div class="user"> <span>电子邮箱：</span>
+      <input type="email" class="user-input" id="userEmail" onFocus="emailFocus()" onBlur="emailBlur()" placeholder="请输入常用邮箱" />
+    </div>
+    <div class="reminder" id="reminderEmail"></div>
+    
+    <div class="footer">
+      <div>
+        <input type="checkbox" id="chb" />
+        我同意遵守<a href="#">会员协议</a> </div>
+      <input type="button" class="register-btn"  id="registerBtn"   value="注册" />
+      <input type="reset" class="reset-btn" id="resetBtn" value="重填" />
+    </div>
+  </form>
+  
+</div>
+<script type="text/javascript" src="js/js.js"></script>
+</body>
+</html>

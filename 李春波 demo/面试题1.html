@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript">
+	var a=18;
+	f1();
+	function f1(){
+		//先在当前作用域寻找变量a；然后在上一层寻找；依次找如果找不到着 not defined
+			var b=9;
+			console.log(a);
+			console.log(b);
+			var a="123";
+		}
+	f2();
+	console.log(d);
+	console.log(c);
+	function f2(){
+		var d=c=8;
+		console.log(d);
+		console.log(c);
+		}
+</script>
+</head>
+
+<body>
+</body>
+</html>

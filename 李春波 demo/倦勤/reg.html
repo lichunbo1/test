@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*,a {
+			font-size: 16px;
+			text-decoration: none;
+		}
+		
+		.headerbg {
+			clear: both;
+			overflow: hidden;
+			background-image: url("headbg.jpg");
+			background-repeat: repeat-x;
+			height: 15px;
+			width: 100%
+		}
+		
+		.container {
+			width: 960px;
+			margin: auto;
+		}
+		
+		.have-account {
+			float: right;
+			height: 34px;
+			line-height: 34px;
+			margin-top: 34px;
+			margin-right: 15%;
+		}
+		
+		.have-account a {
+			text-decoration: none;
+			color: #333;
+			font-size: 16px;
+		}
+		
+		.logo-title {
+			border-left: 1px solid #bbb;
+			font-size: 20px;
+			float: left;
+			height: 34px;
+			line-height: 34px;
+			margin-top: 34px;
+			padding-left: 25px;
+			margin-left: 25px;
+		}
+		
+		.w {
+			clear: both;
+		}
+		
+		.logo {
+			float: left;
+			height: 50px;
+			width: 160px;
+			left: 150px;
+			margin-top: 24px;
+			margin-bottom: 24px;
+			background-image: url("icon.png");
+			background-position: 0px 0px;
+		}
+		
+		.logo-con {
+			margin-left: 15%;
+		}
+		
+		#form-main {
+			width: 400px;
+			float: left;
+		}
+		
+		.form-item {
+			position: relative;
+			border: solid 1px #ddd;
+			width: 398px;
+			height: 52px;
+			z-index: 0;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.form-item label {
+			float: left;
+			width: 90px;
+			height: 52px;
+			line-height: 52px;
+			padding-left: 20px;
+		}
+		
+		.input-tip {
+			color: #c5c5c5;
+			height: 29px;
+			font-size: 12px;
+			padding-top: 5px;
+		}
+		
+		.field {
+			position: absolute;
+			z-index: 2;
+			line-height: 46px;
+			margin-left: 20px;
+			margin-top: 1px;
+			height: 46px;
+			font-size: 14px;
+			font-family: "Microsoft YaHei", "Hiragino Sans GB";
+			color: rgb(204, 204, 204);
+			display: inline;
+			border: none;
+			outline: none;
+			color: #333
+		}
+		
+		.item-email-wrap {
+			height: 86px;
+			position: relative;
+			z-index: 11;
+			display: none;
+		}
+		
+		.item-phone-wrap {
+			height: 86px;
+			position: relative;
+			z-index: 2;
+		}
+		
+		.orEmail,
+		.orphone {
+			position: absolute;
+			right: 0;
+			bottom: 10px;
+		}
+		
+		.btn-phonecode {
+			position: absolute;
+			right: 3px;
+			top: 3px;
+			width: 110px;
+			height: 46px;
+			border: none;
+			background: #f2f2f2;
+			color: #333;
+			padding: 0;
+		}
+		
+		.reg-other {
+			float: left;
+			margin-left: 104px;
+			height: 605px;
+			padding-left: 90px;
+			border-left: solid 1px #e6e6e6;
+		}
+		
+		.phone-fast-reg {
+			background: url("phone.jpg") no-repeat;
+			width: 213px;
+			height: 270px;
+			margin-top: 50px;
+		}
+		
+		.company-reg {
+			width: 160px;
+			height: 60px;
+			margin-top: 50px;
+			border-bottom: solid 1px #ddd;
+			margin-left: 30px;
+		}
+
+		.company-reg a{
+			color:#333;
+			font-size: 16px;
+		}
+
+		.company-reg a:hover{
+			color:#000;
+			font-weight:800;
+		}
+		
+		.company-reg a i {
+			display: inline-block;
+			width: 30px;
+			height: 29px;
+			vertical-align: middle;
+			margin-right: 15px;
+			background-position: 0 -50px;
+			background-image: url("icon.png");
+		}
+		
+		.inter-cust {
+			width: 170px;
+			margin-left: 30px;
+			margin-top: 30px;
+		}
+
+		.inter-cust a {
+			display: block;
+			width: 190px;
+			height: 40px;
+			font-size: 12px;
+			color: #333;
+		}
+
+
+		.inter-cust a:hover {
+			color: #000;
+			font-weight:800;
+		}
+
+		
+		
+		.i-global {
+			background-position: -50px -50px;
+			background-image: url("icon.png");
+		}
+		
+		.inter-cust a i {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			vertical-align: text-bottom;
+			margin-right: 15px;
+			float:left;
+			margin-top: 7px;
+		}
+		
+		.btn-register {
+			width: 100%;
+			height: 54px;
+			color: #fff;
+			background: #e22;
+			border: 0;
+			font-size: 16px;
+			font-family: "Microsoft YaHei", "Hiragino Sans GB";
+		}
+		
+		.footer {
+			font-size: 12px;
+			text-align: center;
+			border-top: solid 1px #e6e6e6;
+			color: #999;
+			padding-bottom: 30px;
+		}
+		
+		.links {
+			padding-top: 30px;
+			padding-bottom: 15px;
+		}
+		
+		.links a {
+			text-decoration: none;
+			color: #bbb;
+			font-size: 16px;
+		}
+		
+		.i-status {
+			display: none;
+			background-position: 0 -117px;
+			background-image: url("icon.png");
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			top: 20px;
+			right: 20px;
+		}
+		
+		.input-tip span {
+			display: none;
+			height: 29px;
+			font-size: 14px;
+			color: #aaa;
+			vertical-align: text-bottom;
+		}
+		
+		.info {
+			background-position: 0 -100px;
+			background-image: url("icon.png");
+			display: block;
+			width: 16px;
+			height: 16px;
+			margin: 5px;
+			float:left;
+			margin: 0 5px;
+		}
+
+		.error {
+			background-position: -17 -101px;
+			background-image: url("icon.png");
+			display: block;
+			width: 16px;
+			height: 16px;
+			margin: 5px;
+			float:left;
+			margin: 0 5px;
+		}
+		
+	</style>
+</head>
+
+<body>
+
+	<div id="form-header" class="header">
+		<div class="logo-con w clearfix">
+			<a href="http://www.jd.com">
+				<div class="logo"></div>
+			</a>
+			<div class="logo-title">欢 迎 注 册</div>
+			<div class="have-account">已有账号 <a href="//passport.jd.com/new/login.aspx">请登录</a></div>
+		</div>
+		<div class="headerbg"></div>
+	</div>
+
+	<div class="container w">
+
+		<div class="main clearfix" id="form-main">
+			<div class="reg-form fl">
+				<form action="" id="register-form" method="post">
+					<div class="form-item form-item-account" id="form-item-account">
+						<label>用　户　名</label>
+						<input type="text" id="form-account" name="regName" class="field" placeholder="您的账户名和登录名" />
+						<i class="i-status"></i>
+					</div>
+					<div class="input-tip">
+						<span id="tip-regName"><i class="info"></i>支持中文、字母、数字、“-”“_”的组合，4-20个字符</span>
+					</div>
+					<div class="form-item">
+						<label>设 置 密 码</label>
+						<input type="password" name="pwd" id="form-pwd" class="field" placeholder="建议至少使用两种字符组合" />
+						<i class="i-status"></i>
+					</div>
+					<div class="input-tip">
+						<span id="tip-pwd"><i class="info"></i>建议使用字母、数字和符号两种及以上的组合，6-20个字符</span>
+					</div>
+					<div class="form-item">
+						<label>确 认 密 码</label>
+						<input type="password" name="pwdRepeat" id="form-equalTopwd" class="field" placeholder="请再次输入密码" />
+						<i class="i-status"></i>
+					</div>
+					<div class="input-tip">
+						<span id="tip-pwdRepeat"><i class="info"></i>请再次输入密码</span>
+					</div>
+					<div class="item-email-wrap" id="emailWrap">
+						<div class="form-item">
+							<label>邮 箱 验 证</label>
+							<input type="text" name="email" id="form-email" class="field ignore" autocomplete="off" placeholder="建议使用常用邮箱" id="email-input"
+							/>
+							<i class="i-status"></i>
+						</div>
+						<div class="input-tip">
+							<span id="tip-email"><i class="info"></i>完成验证后，你可以用该邮箱登录和找回密码</span>
+						</div>
+						<div class="orPhone">或 <a href="javascript:validatePhone();">手机验证</a></div>
+					</div>
+					<div class="item-phone-wrap" id="phoneWrap">
+						<div class="form-item form-item-phone">
+							<label class="select-country" id="select-country" country_id="0086">中国 + 86<a href="javascript:void(0)" class="arrow"></a></label>
+							<input type="text" id="form-phone" name="phone" class="field" placeholder="建议使用常用手机" />
+							<i class="i-status"></i>
+						</div>
+						<div class="input-tip">
+							<span id="tip-phone"><i class="info"></i>完成验证后，可以使用该手机登录和找回密码</span>
+						</div>
+						<div class="orEmail">或 <a href="javascript:validateEmail();">邮箱验证</a></div>
+					</div>
+					<div class="form-item form-item-authcode">
+						<label>验　证　码</label>
+						<input type="text" autocomplete="off" name="authcode" id="authCode" maxlength="6" class="field form-authcode" placeholder="请输入验证码"
+						/>
+
+					</div>
+					<div class="input-tip">
+						<span id="tip-authcode"><i class="info"></i>看不清？点击图片更换验证码</span>
+					</div>
+					<div class="form-item form-item-phonecode">
+						<label>手机验证码</label>
+						<input type="text" name="mobileCode" maxlength="6" id="phoneCode" class="field phonecode" placeholder="请输入手机验证码" autocomplete="off"
+						/>
+						<button id="getPhoneCode" class="btn-phonecode" type="button">获取验证码</button>
+						<i class="i-status"></i>
+					</div>
+					<div class="input-tip">
+						<span id="tip-mobileCode"></span>
+					</div>
+					<div class="form-agreen">
+						<div><input type="checkbox" name="agreen" checked="" />我已阅读并同意<a href="javascript:;" id="protocol">《京东用户注册协议》</a> </div>
+						<div class="input-tip">
+							<span></span>
+						</div>
+					</div>
+					<div>
+						<button type="submit" class="btn-register">立即注册</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+
+		<div id="form-company" class="reg-other">
+			<div class="company-reg">
+				<a href="../reg/company" target="_blank">
+					<i class="i-company"></i>
+					<span>企业用户注册</span>
+				</a>
+			</div>
+			<div class="inter-cust">
+				<a href="//reg.joybuy.com/reg/person.html" target="_blank">
+					<i class="i-global"></i>
+					<span>INTERNATIONAL<br/>CUSTOMERS</span>
+				</a>
+			</div>
+			<div class="phone-fast-reg">
+			</div>
+		</div>
+	</div>
+
+	<div id="form-footer" class="footer w">
+		<div class="links">
+			<a rel="nofollow" target="_blank" href="//www.jd.com/intro/about.aspx"> 关于我们</a>|
+			<a rel="nofollow" target="_blank" href="//www.jd.com/contact/">联系我们</a>|
+			<a rel="nofollow" target="_blank" href="//zhaopin.jd.com/">人才招聘</a>|
+			<a rel="nofollow" target="_blank" href="//www.jd.com/contact/joinin.aspx">商家入驻</a>|
+			<a rel="nofollow" target="_blank" href="//www.jd.com/intro/service.aspx">广告服务</a>|
+			<a rel="nofollow" target="_blank" href="//app.jd.com/">手机京东</a>|
+			<a target="_blank" href="//club.jd.com/links.aspx">友情链接</a>|
+			<a target="_blank" href="//media.jd.com">销售联盟</a>|
+			<a href="//club.jd.com/" target="_blank">京东社区</a>|
+			<a href="//gongyi.jd.com" target="_blank">京东公益</a>|
+			<a target="_blank" href="//en.jd.com/" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+		</div>
+		<div class="copyright">
+			Copyright&copy;2004-2016&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+	var inputs=document.getElementsByTagName("input");
+	var tipSpan;
+	var placeholder="";
+	
+	function Patterns(){}
+	Patterns.regName="^[\u4E00-\u9FFFa-zA-Z0-9-_]{4,20}$";
+	Patterns.pwd="^[\\w\\d-_@#$%^*!]{6,20}$";
+	Patterns.email="^\\w[-\\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\\.)+[A-Za-z]{2,14}$";
+	Patterns.phone="^0?(13|14|15|18)[0-9]{9}$";
+
+	function focusHandler(){
+		//step1. 清空placeholder
+		if(placeholder==""){
+			placeholder=this.getAttribute("placeholder");
+		}
+		this.setAttribute("placeholder","");
+		//step2. 显示提示信息
+		var name=this.getAttribute("name");
+		var idStr="tip-"+name;
+		tipSpan=document.getElementById(idStr);
+		tipSpan.style.display="block";
+		//this.parentNode.nextSibling.nextSibling.firstChild.style.display="inline-block";
+	}
+
+	function blurHandler(){
+		if(this.value=="" || this.value.length==0){
+			tipSpan.style.display="none";
+			this.parentNode.style.borderColor="#ddd";
+			this.nextSibling.nextSibling.style.display="none";
+			this.setAttribute("placeholder",placeholder);
+			tipSpan.firstChild.setAttribute("class","info");
+			tipSpan.style.color="#333";
+		}else{
+			//验证数据是否合法
+			//var pattern=new Patterns();
+			validate(this,Patterns[this.getAttribute("name")]);
+		}
+	}
+
+	//验证数据是否合法
+	function validate(target,pattern){
+		if(target.value.match(pattern)){
+						target.nextSibling.nextSibling.style.display="block";
+						target.parentNode.style.borderColor="#ddd";
+						tipSpan.style.display="none";
+						tipSpan.firstChild.setAttribute("class","info");
+		}else{
+						//提示错误
+						target.parentNode.style.borderColor="red";
+						tipSpan.style.display="block";
+						tipSpan.style.color="red";
+						tipSpan.firstChild.setAttribute("class","error");
+						target.nextSibling.nextSibling.style.display="none";
+		}
+	}
+	
+	var phoneWrap=document.getElementById("phoneWrap");
+	var emailWrap=document.getElementById("emailWrap");
+	function validateEmail(){
+		phoneWrap.style.display="none";
+		emailWrap.style.display="block";
+	}
+
+	function validatePhone(){
+		emailWrap.style.display="none";
+		phoneWrap.style.display="block";
+	}
+	
+
+	for(var i=0; i<inputs.length;i++){
+		inputs.item(i).addEventListener("focus",focusHandler);
+		inputs.item(i).addEventListener("blur",blurHandler);
+	}
+
+	
+</script>
+</body>
+
+</html>
